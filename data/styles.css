@@ -179,4 +179,9 @@
 }
 .box_11 {
 }
+._图片 {
+  font-family:'PingFangHK-Regular', 'PingFang HK', sans-serif;
+  font-weight:400;
+  font-style:normal;
+}
 textarea, select, input, button { outline: none; }
