@@ -130,7 +130,7 @@
   color:#999999;
 }
 .label1 {
-  font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;
+  font-family:"PingFang SC", sans-serif;
   font-weight:400;
   font-style:normal;
   font-size:14px;
@@ -142,13 +142,13 @@
   font-style:normal;
 }
 .button {
-  font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;
+  font-family:"PingFang SC", sans-serif;
   font-weight:400;
   font-style:normal;
   font-size:14px;
 }
 .box_1 {
-  font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;
+  font-family:"PingFang SC", sans-serif;
   font-weight:400;
   font-style:normal;
 }
@@ -180,7 +180,7 @@
 .box_11 {
 }
 ._图片 {
-  font-family:'PingFangHK-Regular', 'PingFang HK', sans-serif;
+  font-family:"PingFang HK", sans-serif;
   font-weight:400;
   font-style:normal;
 }
