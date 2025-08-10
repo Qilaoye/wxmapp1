@@ -2956,7 +2956,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:28px;
+  width:63px;
   height:19px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -2971,7 +2971,7 @@
   position:absolute;
   left:44px;
   top:596px;
-  width:28px;
+  width:63px;
   height:19px;
   display:flex;
 }
@@ -2984,7 +2984,7 @@
 }
 #u634_text {
   border-width:0px;
-  white-space:nowrap;
+  word-wrap:break-word;
   text-transform:none;
 }
 #u635 {
