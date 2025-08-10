@@ -188,4 +188,25 @@
   color:#000000;
   text-align:left;
 }
+.paragraph {
+  font-family:"PingFang HK", sans-serif;
+  font-weight:400;
+  font-style:normal;
+  text-align:left;
+}
+.text_field1 {
+  font-family:"PingFang HK", sans-serif;
+  font-weight:400;
+  font-style:normal;
+  color:#000000;
+  text-align:left;
+}
+.link_button {
+  color:#1E98D7;
+}
+.ellipse1 {
+  font-family:"PingFang HK", sans-serif;
+  font-weight:400;
+  font-style:normal;
+}
 textarea, select, input, button { outline: none; }
