@@ -62,16 +62,18 @@
             } else if (message == 'axEventComplete') {
                 handleNoCondition()
                 if (tryAddGroupCounter()) {
-                    currentStack.shift();
+                    currentStack.pop();
                     return;
                 }
 
-                finishedStack.push(currentStack.shift());
-                for (var i = finishedStack.length - 1; i >= 0; i--) {
-                    if ($('#traceDiv').children().length > 99) $('#traceDiv').children().last().remove();
-                    $('#traceDiv').prepend(finishedStack[i]);
+                finishedStack.push(currentStack.pop());
+                if(currentStack.length == 0) {
+                    for(var i = finishedStack.length - 1; i >= 0; i--) {
+                        if($('#traceDiv').children().length > 99) $('#traceDiv').children().last().remove();
+                        $('#traceDiv').prepend(finishedStack[i]);
+                    }
+                    finishedStack = [];
                 }
-                finishedStack = [];
             } else if (message == 'axCase') {
                 var addToStack = "<div class='axCaseContainer'>";
                 addToStack += "    <div class='axCaseItem'>" + data.item + "</div>";
@@ -126,7 +128,7 @@
 
         function tryAddGroupCounter() {
             var prevEvent;
-            if(finishedStack.length == 0 && currentStack.length > 0) {
+            if(finishedStack.length == 0 && currentStack.length == 1) {
                 prevEvent = $('#traceDiv').find('.axEventBlock').first();
                 if(prevEvent.length == 0) return false;
             } else if(finishedStack.length > 0) {
@@ -135,7 +137,7 @@
                 return false;
             }
 
-            var currentEvent = currentStack[0];
+            var currentEvent = currentStack[currentStack.length - 1];
 
             if(compareEventBlocks(prevEvent, currentEvent)) {
                 var prevLabel = prevEvent.find('.axLabel');
